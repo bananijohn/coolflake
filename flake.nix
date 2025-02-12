@@ -90,7 +90,8 @@ in
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
-	nix-homebrew.darwinModules.nix-homebrew {
+	nix-homebrew.darwinModules.nix-homebrew
+	{
 	  nix-homebrew = {
 	    enable = true;
 	    # User who owns homebrew:
