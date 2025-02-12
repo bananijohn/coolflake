@@ -108,59 +108,59 @@ in
 
       services.skhd = {
         enable = true;
-	skhdConfig = { "cmd - q : open -na /run/current-system/sw/bin/kitty"
-	"cmd - f : open -na firefox"
-	"cmd - d : open /run/current-system/sw/bin/vesktop"
-	"cmd - left : yabai -m window --focus west"
-	"cmd - down : yabai -m window --focus south"
-	"cmd - up : yabai -m window --focus north"
-	"cmd - right : yabai -m window --focus east"
-	"cmd - 1 : yabai -m window --focus 1"
-        "cmd - 2 : yabai -m window --focus 2"
-	"cmd - 3 : yabai -m window --focus 3"
-	"cmd - 4 : yabai -m window --focus 4"
-	"cmd - 5 : yabai -m window --focus 5"
-	"cmd - 6 : yabai -m window --focus 6"
-	"cmd - 7 : yabai -m window --focus 7"
-	"cmd - 8 : yabai -m window --focus 8"
-	"cmd - 9 : yabai -m window --focus 9"
-	"cmd - 10 : yabai -m window --focus 10"
-	"cmd + shift - c : yabai -m space --destroy"
-	"cmd - c : yabai -m window --close"
-	"cmd - m : yabai -m window --minimize"
-	"cmd - v : yabai -m window --toggle float"
-	"cmd + shift - f : yabai -m window -- focus mouse && yabai -m window --toggle zoom-fullscreen"
-	"cmd - 0x2C : yabai -m space --gap rel:10"
-	"cmd - 0x18 : yabai -m space --gap rel:-10"
-	"cmd + shift - 0 : yabai -m space --balance"
-	"cmd + ctrl - left : yabai -m window --swap west"
-	"cmd + ctrl - down : yabai -m window --swap south"
-	"cmd + ctrl - up : yabai -m window --swap north"
-	"cmd + ctrl - right : yabai -m window --swap east"
-	"cmd + shift - left : yabai -m window --warp west"
-	"cmd + shift - down : yabai -m window --warp south"
-	"cmd + shift - up : yabai -m window --warp north"
-	"cmd + shift - right : yabai -m window --warp east"
-	"cmd + alt - 1 : yabai -m window --space 1"
-	"cmd + alt - 2 : yabai -m window --space 2"
-	"cmd + alt - 3 : yabai -m window --space 3"
-	"cmd + alt - 4 : yabai -m window --space 4"
-	"cmd + alt - 5 : yabai -m window --space 5"
-	"cmd + alt - 6 : yabai -m window --space 6"
-	"cmd + alt - 7 : yabai -m window --space 7"
-	"cmd + alt - 8 : yabai -m window --space 8"
-	"cmd + alt - 9 : yabai -m window --space 9"
-	"cmd + alt - 0 : yabai -m window --space 10"
-	"cmd + alt - 0x2c : yabai -m space --layout bsp"
-	"cmd + alt - 0x18 : yabai -m space --layout float"
-	"cmd + alt - č : yabai -m window --resize left:-40:0"
-	"cmd + alt - ć : yabai -m window --resize right:40:0"
-	"cmd + alt - š : yabai -m window --resize bottom:0:40"
-	"cmd + alt - đ : yabai -m window --resize top:0-40"
-	"cmd + ctrl - č : yabai -m window --resize left:40:0"
-	"cmd + ctrl -ć : yabai -m window --resize right:-40:0"
-	"cmd + ctrl - š : yabai -m window --resize bottom:0:-40"
-	"cmd + ctrl - đ : yabai -m window --resize top:0:40"
+	skhdConfig = { "cmd - q : open -na /run/current-system/sw/bin/kitty";
+	"cmd - f : open -na firefox";
+	"cmd - d : open /run/current-system/sw/bin/vesktop";
+	"cmd - left : yabai -m window --focus west";
+	"cmd - down : yabai -m window --focus south";
+	"cmd - up : yabai -m window --focus north";
+	"cmd - right : yabai -m window --focus east";
+	"cmd - 1 : yabai -m window --focus 1";
+        "cmd - 2 : yabai -m window --focus 2";
+	"cmd - 3 : yabai -m window --focus 3";
+	"cmd - 4 : yabai -m window --focus 4";
+	"cmd - 5 : yabai -m window --focus 5";
+	"cmd - 6 : yabai -m window --focus 6";
+	"cmd - 7 : yabai -m window --focus 7";
+	"cmd - 8 : yabai -m window --focus 8";
+	"cmd - 9 : yabai -m window --focus 9";
+	"cmd - 10 : yabai -m window --focus 10";
+	"cmd + shift - c : yabai -m space --destroy";
+	"cmd - c : yabai -m window --close";
+	"cmd - m : yabai -m window --minimize";
+	"cmd - v : yabai -m window --toggle float";
+	"cmd + shift - f : yabai -m window -- focus mouse && yabai -m window --toggle zoom-fullscreen";
+	"cmd - 0x2C : yabai -m space --gap rel:10";
+	"cmd - 0x18 : yabai -m space --gap rel:-10";
+	"cmd + shift - 0 : yabai -m space --balance";
+	"cmd + ctrl - left : yabai -m window --swap west";
+	"cmd + ctrl - down : yabai -m window --swap south";
+	"cmd + ctrl - up : yabai -m window --swap north";
+	"cmd + ctrl - right : yabai -m window --swap east";
+	"cmd + shift - left : yabai -m window --warp west";
+	"cmd + shift - down : yabai -m window --warp south";
+	"cmd + shift - up : yabai -m window --warp north";
+	"cmd + shift - right : yabai -m window --warp east";
+	"cmd + alt - 1 : yabai -m window --space 1";
+	"cmd + alt - 2 : yabai -m window --space 2";
+	"cmd + alt - 3 : yabai -m window --space 3";
+	"cmd + alt - 4 : yabai -m window --space 4";
+	"cmd + alt - 5 : yabai -m window --space 5";
+	"cmd + alt - 6 : yabai -m window --space 6";
+	"cmd + alt - 7 : yabai -m window --space 7";
+	"cmd + alt - 8 : yabai -m window --space 8";
+	"cmd + alt - 9 : yabai -m window --space 9";
+	"cmd + alt - 0 : yabai -m window --space 10";
+	"cmd + alt - 0x2c : yabai -m space --layout bsp";
+	"cmd + alt - 0x18 : yabai -m space --layout float";
+	"cmd + alt - č : yabai -m window --resize left:-40:0";
+	"cmd + alt - ć : yabai -m window --resize right:40:0";
+	"cmd + alt - š : yabai -m window --resize bottom:0:40";
+	"cmd + alt - đ : yabai -m window --resize top:0-40";
+	"cmd + ctrl - č : yabai -m window --resize left:40:0";
+	"cmd + ctrl -ć : yabai -m window --resize right:-40:0";
+	"cmd + ctrl - š : yabai -m window --resize bottom:0:-40";
+	"cmd + ctrl - đ : yabai -m window --resize top:0:40";
       };
     };
       # Necessary for using flakes on this system.
