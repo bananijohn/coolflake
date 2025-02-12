@@ -35,7 +35,9 @@
 	  brews = [
 	  ];
 	  casks = [
-	  "aerospace"
+	  ];
+	  taps = [
+	    "nikitabobko/aerospace"
 	  ];
 	  # Deletes unused packages for maximum declaration
 	  onActivation.cleanup = "zap";
