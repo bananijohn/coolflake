@@ -6,9 +6,13 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, lix-module }:
   let
     configuration = { pkgs, config, ... }: {
       # Installed packages. to search by name, run:
@@ -76,6 +80,13 @@ in
       system.keyboard.enableKeyMapping = true;
       system.keyboard.remapCapsLockToEscape = true;
 
+      # Yabai config ig lmao
+
+#      services.yabai = {
+#        enable = true;
+#	enableScriptingAddition = true;
+#	};
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
@@ -96,6 +107,7 @@ in
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
+	lix-modules.darwinModules.default
 	nix-homebrew.darwinModules.nix-homebrew
 	{
 	  nix-homebrew = {
