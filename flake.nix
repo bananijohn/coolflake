@@ -94,7 +94,7 @@ in
 	  nix-homebrew = {
 	    enable = true;
 	    # User who owns homebrew:
-	    user = "Ian";
+	    user = "";
 	  };
 	};
       ];
