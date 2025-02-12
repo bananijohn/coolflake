@@ -72,6 +72,8 @@ in
 	finder.QuitMenuItem = true;
 	finder.ShowStatusBar = true;
       };
+      
+      system.keyboard.remapCapsLockToEscape = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
