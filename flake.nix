@@ -6,11 +6,9 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-    lix-module.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, lix-module }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
       # Installed packages. to search by name, run:
@@ -75,6 +73,7 @@ in
 	finder.ShowStatusBar = true;
       };
       
+      system.keyboard.enableKeyMapping
       system.keyboard.remapCapsLockToEscape = true;
 
       # Yabai config ig lmao
@@ -104,7 +103,6 @@ in
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
       modules = [
 	configuration
-	lix-module.darwinModules.default
 	nix-homebrew.darwinModules.nix-homebrew
 	{
 	  nix-homebrew = {
