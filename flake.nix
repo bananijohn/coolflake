@@ -78,10 +78,24 @@ in
 
       # Yabai config ig lmao
 
-#      services.yabai = {
-#        enable = true;
-#	enableScriptingAddition = true;
-#	};
+      services.yabai = {
+        enable = true;
+	enableScriptingAddition = true;
+	config = {
+	  window_placement = "second_child";
+	  top_padding = 5;
+	  bottom_padding = 5;
+	  left_padding = 5;
+	  right_padding = 5;
+	  window_gap = 5;
+	  auto_balance = "off";
+	  split_ratio = 5;
+	  layout = "bsp";
+	  mouse_modifier = "command";
+	  mouse_action1 = "move";
+	  mouse_action2 = "resize";
+	  };
+	};
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
