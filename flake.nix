@@ -27,6 +27,7 @@
 	  pkgs.yabai
 	  pkgs.skhd
 	  pkgs.fastfetch
+	  pkgs.aerospace
 	];
 
 	homebrew = {
@@ -37,7 +38,6 @@
 	  casks = [
 	  ];
 	  taps = [
-	    "nikitabobko/aerospace"
 	  ];
 	  # Deletes unused packages for maximum declaration
 	  onActivation.cleanup = "zap";
