@@ -97,7 +97,7 @@ in
 	    # User who owns homebrew:
 	    user = "";
 	  };
-	};
+	}
       ];
     };
   };
