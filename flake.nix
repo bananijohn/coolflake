@@ -108,7 +108,7 @@ in
 
       services.skhd = {
         enable = true;
-	skhdConfig = "cmd - q : open -na /run/current-system/sw/bin/kitty";
+	skhdConfig = "alt + shift - q : open -na /run/current-system/sw/bin/kitty";
 #	"cmd - f : open -na firefox";
 #	"cmd - d : open /run/current-system/sw/bin/vesktop";
 #	"cmd - left : yabai -m window --focus west";
