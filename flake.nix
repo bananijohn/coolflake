@@ -104,8 +104,8 @@ in
     # $ darwin-rebuild build --flake .#coolflake
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
       modules = [
-	configuration
 	lix-module.darwinModules.default
+	configuration
 	nix-homebrew.darwinModules.nix-homebrew
 	{
 	  nix-homebrew = {
