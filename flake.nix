@@ -68,6 +68,7 @@ in
       system.defaults = {
         dock.autohide = true;
 	dock.autohide-time-modifier = 0.3;
+	dock.autohide-delay = 0.05;
 	WindowManager.EnableTopTilingByEdgeDrag = true;
 	finder._FXShowPosixPathInTitle = true;
 	finder.QuitMenuItem = true;
