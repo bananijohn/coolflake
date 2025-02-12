@@ -104,7 +104,65 @@ in
         };
       };
 
+      # skhd config lol
 
+      services.skhd = {
+        enable = true;
+	skhdconfig = "
+	cmd - q : open -na /run/current-system/sw/bin/kitty \n
+	cmd - f : open -na firefox \n
+	cmd - d : open /run/current-system/sw/bin/vesktop \n
+	cmd - left : yabai -m window --focus west \n
+	cmd - down : yabai -m window --focus south \n
+	cmd - up : yabai -m window --focus north \n
+	cmd - right : yabai -m window --focus east \n
+	cmd - 1 : yabai -m window --focus 1 \n
+        cmd - 2 : yabai -m window --focus 2 \n
+	cmd - 3 : yabai -m window --focus 3 \n
+	cmd - 4 : yabai -m window --focus 4 \n
+	cmd - 5 : yabai -m window --focus 5 \n
+	cmd - 6 : yabai -m window --focus 6 \n
+	cmd - 7 : yabai -m window --focus 7 \n
+	cmd - 8 : yabai -m window --focus 8 \n
+	cmd - 9 : yabai -m window --focus 9 \n
+	cmd - 10 : yabai -m window --focus 10 \n
+	cmd + shift - c : yabai -m space --destroy \n
+	cmd - c : yabai -m window --close \n
+	cmd - m : yabai -m window --minimize \n
+	cmd - v : yabai -m window --toggle float \n
+	cmd + shift - f : yabai -m window -- focus mouse && yabai -m window --toggle zoom-fullscreen \n
+	cmd - 0x2C : yabai -m space --gap rel:10 \n
+	cmd - 0x18 : yabai -m space --gap rel:-10 \n
+	cmd + shift - 0 : yabai -m space --balance \n
+	cmd + ctrl - left : yabai -m window --swap west \n
+	cmd + ctrl - down : yabai -m window --swap south \n
+	cmd + ctrl - up : yabai -m window --swap north \n
+	cmd + ctrl - right : yabai -m window --swap east \n
+	cmd + shift - left : yabai -m window --warp west \n
+	cmd + shift - down : yabai -m window --warp south \n
+	cmd + shift - up : yabai -m window --warp north \n
+	cmd + shift - right : yabai -m window --warp east \n
+	cmd + alt - 1 : yabai -m window --space 1 \n
+	cmd + alt - 2 : yabai -m window --space 2 \n
+	cmd + alt - 3 : yabai -m window --space 3 \n
+	cmd + alt - 4 : yabai -m window --space 4 \n
+	cmd + alt - 5 : yabai -m window --space 5 \n
+	cmd + alt - 6 : yabai -m window --space 6 \n
+	cmd + alt - 7 : yabai -m window --space 7 \n
+	cmd + alt - 8 : yabai -m window --space 8 \n
+	cmd + alt - 9 : yabai -m window --space 9 \n
+	cmd + alt - 0 : yabai -m window --space 10 \n
+	cmd + alt - 0x2c : yabai -m space --layout bsp \n
+	cmd + alt - 0x18 : yabai -m space --layout float \n
+	cmd + alt - č : yabai -m window --resize left:-40:0 \n
+	cmd + alt - ć : yabai -m window --resize right:40:0 \n
+	cmd + alt - š : yabai -m window --resize bottom:0:40 \n
+	cmd + alt - đ : yabai -m window --resize top:0-40 \n
+	cmd + ctrl - č : yabai -m window --resize left:40:0 \n
+	cmd + ctrl -ć : yabai -m window --resize right:-40:0 \n
+	cmd + ctrl - š : yabai -m window --resize bottom:0:-40 \n
+	cmd + ctrl - đ : yabai -m window --resize top:0:40 \n
+      ";
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
