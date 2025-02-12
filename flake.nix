@@ -163,6 +163,7 @@ in
 	cmd + ctrl - š : yabai -m window --resize bottom:0:-40 \n
 	cmd + ctrl - đ : yabai -m window --resize top:0:40 \n
       ";
+    };
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
