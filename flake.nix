@@ -108,7 +108,7 @@ in
 
       services.skhd = {
         enable = true;
-	skhdConfig = "cmd - q : open -na /run/current-system/sw/bin/kitty"
+	skhdConfig = { "cmd - q : open -na /run/current-system/sw/bin/kitty"
 	"cmd - f : open -na firefox"
 	"cmd - d : open /run/current-system/sw/bin/vesktop"
 	"cmd - left : yabai -m window --focus west"
@@ -161,7 +161,7 @@ in
 	"cmd + ctrl -ć : yabai -m window --resize right:-40:0"
 	"cmd + ctrl - š : yabai -m window --resize bottom:0:-40"
 	"cmd + ctrl - đ : yabai -m window --resize top:0:40"
-      ;
+      };
     };
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
