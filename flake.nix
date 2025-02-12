@@ -108,7 +108,7 @@ in
 
       services.skhd = {
         enable = true;
-	skhdconfig = "
+	skhdConfig = "
 	cmd - q : open -na /run/current-system/sw/bin/kitty \n
 	cmd - f : open -na firefox \n
 	cmd - d : open /run/current-system/sw/bin/vesktop \n
