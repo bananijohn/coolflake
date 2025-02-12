@@ -35,6 +35,7 @@
 	  brews = [
 	  ];
 	  casks = [
+	  aerospace
 	  ];
 	  # Deletes unused packages for maximum declaration
 	  onActivation.cleanup = "zap";
@@ -86,7 +87,7 @@ in
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake ~/.config/nix#coolflake
+    # $ darwin-rebuild build --flake .#coolflake
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
