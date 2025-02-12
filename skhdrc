@@ -1,0 +1,49 @@
+alt + shift - f : open -na firefox
+alt + shift - d : open /run/current-system/sw/bin/vesktop
+alt - left : yabai -m window --focus west
+alt - down : yabai -m window --focus south
+alt - up : yabai -m window --focus north
+alt - right : yabai -m window --focus east
+cmd - 1 : yabai -m window --focus 1
+cmd - 2 : yabai -m window --focus 2
+cmd - 3 : yabai -m window --focus 3
+cmd - 4 : yabai -m window --focus 4
+cmd - 5 : yabai -m window --focus 5
+cmd - 6 : yabai -m window --focus 6
+cmd - 7 : yabai -m window --focus 7
+cmd - 8 : yabai -m window --focus 8
+cmd - 9 : yabai -m window --focus 9
+cmd - 10 : yabai -m window --focus 10
+shift + alt - c : yabai -m space --destroy
+ctrl + alt - c : yabai -m window --close
+ctrl + alt - m : yabai -m window --minimize
+ctrl + alt - v : yabai -m window --toggle float
+shift + ctrl - f : yabai -m window -- focus mouse && yabai -m window --toggle zoom-fullscreen
+ctrl - 0x2C : yabai -m space --gap rel:10
+ctrl - 0x18 : yabai -m space --gap rel:-10
+cmd + shift - 0 : yabai -m space --balance
+shift + ctrl - left : yabai -m window --warp west
+shift + ctrl - down : yabai -m window --warp south
+shift + ctrl - up : yabai -m window --warp north
+shift + ctrl - right : yabai -m window --warp east
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shft + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+shift + alt - 7 : yabai -m window --space 7
+shift + alt - 8 : yabai -m window --space 8
+shift + alt - 9 : yabai -m window --space 9
+shift + alt - 0 : yabai -m window --space 10
+ctrl + alt - 0x2c : yabai -m space --layout bsp
+ctrl + alt - 0x18 : yabai -m space --layout float
+shift+ alt - č : yabai -m window --resize left:-40:0
+shift + alt - ć : yabai -m window --resize right:40:0
+shift + alt - š : yabai -m window --resize bottom:0:40
+shift + alt - đ : yabai -m window --resize top:0-40
+shift + ctrl - č : yabai -m window --resize left:40:0
+shift + ctrl -ć : yabai -m window --resize right:-40:0
+shift + ctrl - š : yabai -m window --resize bottom:0:-40
+shift + ctrl - đ : yabai -m window --resize top:0:40
+
