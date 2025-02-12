@@ -13,21 +13,21 @@
     configuration = { pkgs, config, ... }: {
       # Installed packages. to search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages.pkgs =
+      environment.systemPackages =
         [ 
-	  neovim
-	  kitty
-	  mkalias
-	  git
-	  home-manager
-	  oh-my-zsh
-	  vesktop
-	  kitty-img
-	  kitty-themes
-	  yabai
-	  skhd
-	  fastfetch
-	  aerospace
+	  pkgs.neovim
+	  pkgs.kitty
+	  pkgs.mkalias
+	  pkgs.git
+	  pkgs.home-manager
+	  pkgs.oh-my-zsh
+	  pkgs.vesktop
+	  pkgs.kitty-img
+	  pkgs.kitty-themes
+	  pkgs.yabai
+	  pkgs.skhd
+	  pkgs.fastfetch
+	  pkgs.aerospace
 	];
 
 	homebrew = {
