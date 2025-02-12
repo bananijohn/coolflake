@@ -27,7 +27,8 @@
 	  pkgs.yabai
 	  pkgs.skhd
 	  pkgs.fastfetch
-	  pkgs.aerospace
+	  pkgs.sketchybar
+	  pkgs.sketchybar-app-font
 	];
 
 	homebrew = {
@@ -96,8 +97,13 @@ in
 	  mouse_modifier = "command";
 	  mouse_action1 = "move";
 	  mouse_action2 = "resize";
-	  };
-	};
+	  window_shadow = "float";
+	  window_opacity = "on";
+	  active_window_opacity = "0.9";
+	  normal_window_opacity = "0.7";
+        };
+      };
+
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
