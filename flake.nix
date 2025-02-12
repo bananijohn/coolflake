@@ -88,7 +88,7 @@ in
     # Build darwin flake using:
     # $ darwin-rebuild build --flake ~/.config/nix#coolflake
     darwinConfigurations."coolflake" = nix-darwin.lib.darwinSystem {
-      modules [
+      modules = [
         configuration
 	nix-homebrew.darwinModules.nix-homebrew {
 	  nix-homebrew = {
