@@ -82,7 +82,7 @@ in
       # Yabai config ig lmao
 
       services.yabai = {
-        enable = true;
+        enable = false;
 	enableScriptingAddition = true;
 	config = {
 	  window_placement = "second_child";
@@ -107,7 +107,7 @@ in
       # skhd config lol
 
       services.skhd = {
-        enable = true;
+        enable = false;
     };
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
