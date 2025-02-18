@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sketchybar --add item calendar right \
-	   --set calendar icon=  \
+sketchybar --add item clock right \
+	   --set clock icon=  \
 	   		  label="$(date +'%b %d %H:%M')" \
-			  update_freq=10
-			  script="$PLUGIN_DIR/clock.sh" \
+			  update_freq=10 \
+			  script="$PLUGIN_DIR/clock.sh"
