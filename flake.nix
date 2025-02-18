@@ -19,6 +19,7 @@
         [ 
 	  pkgs.neovim-unwrapped
 	  pkgs.skhd
+	  pkgs.bat
 	  pkgs.kitty
 	  pkgs.fzf
 	  pkgs.cava
