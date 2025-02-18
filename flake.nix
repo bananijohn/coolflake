@@ -20,6 +20,7 @@
 	  pkgs.neovim-unwrapped
 	  pkgs.skhd
 	  pkgs.kitty
+	  pkgs.fzf
 	  pkgs.cava
 	  pkgs.mkalias
 	  pkgs.cmatrix
@@ -53,6 +54,7 @@
 	    "font-proggy-clean-tt-nerd-font"
 	    "background-music"
 	    "desktoppr"
+	    "raycast"
 	    "font-fira-code-nerd-font"
 	  ];
 	  taps = [

@@ -8,5 +8,7 @@ do
   	     --set space.$sid space=$sid \
 	     		      icon=$sid \
 			      label.font="FiraCode Nerd Font" \
+			      background.border_width=2 \
+			      background.border_color=$LAVENDER \
 			      script="$PLUGIN_DIR/space.sh"
 done

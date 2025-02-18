@@ -9,9 +9,9 @@ if [ $SELECTED = true ]; then
   sketchybar --set "$NAME" background.drawing=on \
 	  		   background.color=$LAVENDER \
 			   label.color=$BAR_COLOR \
-			   icon.color=$BAR_COLOR
+			   icon.color=$BAR_COLOR 
 else
   sketchybar --set $NAME background.drawing=off \
 			 label.color=$LAVENDER \
-			 icon.color=$LAVENDER 
+			 icon.color=$LAVENDER
 fi
