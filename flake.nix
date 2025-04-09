@@ -19,7 +19,10 @@
         [ 
 	  pkgs.neovim-unwrapped
 	  pkgs.skhd
+	  pkgs.jankyborders
+#	  pkgs.aerospace
 	  pkgs.bat
+	  pkgs.wget
 	  pkgs.kitty
 	  pkgs.fzf
 	  pkgs.cava
@@ -41,8 +44,6 @@
 	  pkgs.stow
 	];
 
-	# Zsh syntax highlighting
-
 
 	homebrew = {
 	  enable = true;
@@ -56,6 +57,7 @@
 	    "background-music"
 	    "desktoppr"
 	    "raycast"
+	    "zen-browser"
 	    "font-fira-code-nerd-font"
 	  ];
 	  taps = [
@@ -92,7 +94,6 @@ in
 	dock.autohide-delay = 0.05;
 	dock.minimize-to-application = true;
 	dock.show-recents = false;
-	WindowManager.EnableTopTilingByEdgeDrag = true;
 	finder._FXShowPosixPathInTitle = true;
 	finder.QuitMenuItem = true;
 	finder.ShowStatusBar = true;
@@ -106,27 +107,27 @@ in
       services.yabai = {
         enable = true;
 	enableScriptingAddition = true;
-#	config = {
-#	  window_placement = "second_child";
-#	  focus_follows_mouse = "autofocus";
-#	  mouse_follows_focus = "on";
-#	  top_padding = 5;
-#	  bottom_padding = 5;
-#	  left_padding = 5;
-#	  right_padding = 5;
-#	  window_gap = 5;
-#	  auto_balance = "on";
-#	  split_ratio = 5;
-#	  layout = "bsp";
-#	  mouse_modifier = "cmd";
-#	  mouse_action1 = "move";
-#	  mouse_action2 = "resize";
-#	  window_shadow = "float";
-#	  window_opacity = "on";
-#	  active_window_opacity = "0.95";
-#	  normal_window_opacity = "0.9";
-#        };
-#	extraConfig = "yabai -m space --create && yabai -m config external_bar all:37:0";
+	config = {
+	  window_placement = "second_child";
+	  focus_follows_mouse = "autofocus";
+	  mouse_follows_focus = "on";
+	  top_padding = 10;
+	  bottom_padding = 10;
+	  left_padding = 10;
+	  right_padding = 10;
+	  window_gap = 10;
+	  auto_balance = "on";
+	  split_ratio = 5;
+	  layout = "bsp";
+	  mouse_modifier = "ctrl";
+	  mouse_action1 = "move";
+	  mouse_action2 = "resize";
+	  window_shadow = "float";
+	  window_opacity = "on";
+	  active_window_opacity = "0.95";
+	  normal_window_opacity = "0.9";
+        };
+	extraConfig = "sudo yabai --load-sa && yabai -m config external_bar all:37:0";
       };
 
       # skhd config lol
@@ -146,9 +147,29 @@ in
       services.sketchybar = {
         enable = true;
     };
+      
+      # Jankyborders :3
+      services.jankyborders = {
+        enable = true;
+	active_color = "gradient(top_right=0xff85c1dc,bottom_left=0xff8caaee)";
+	inactive_color = "0xff949cbb";
+	width = 5.0;
+	order = "below";
+	blacklist = [
+	  "Raycast"
+	  ];
+	style = "round";
+	hidpi = true;
+    };
 
       # Necessary for using flakes on this system.
-      nix.settings.experimental-features = "nix-command flakes";
+      nix.settings = { 
+        experimental-features = "nix-command flakes";
+	trusted-users = [
+	  "root"
+	  "@admin"
+	];
+    };
 
       # Set Git commit hash for darwin-version
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -172,15 +193,13 @@ in
 	  programs.nixvim = {
 	    enable = true;
 	    plugins.lualine.enable = true;
-	    plugins.treesitter.enable = true;
 	    colorschemes.catppuccin = {
 	      enable = true;
 	      autoLoad = true;
 	      settings = {
-	        flavour = "mocha";
+	        flavour = "frappe";
 		integrations = {
 		  lualine.nvim = true;
-		  treesitter = true;
 		};
 	    };
 	  };

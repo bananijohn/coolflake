@@ -12,7 +12,7 @@ ITEM_DIR="$CONFIG_DIR/items"
 # If you are looking for other colors, see the color picker:
 # https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
-sketchybar --bar position=top height=37 blur_radius=30 color=$BG0
+sketchybar --bar position=top height=37 blur_radius=30 color=$TRANSPARENT
 
 ##### Changing Defaults #####
 # We now change some default values, which are applied to all further items.
@@ -33,7 +33,7 @@ default=(
   label.padding_left=4
   label.padding_right=4
   background.height=24
-  background.color=$BAR_COLOR
+  background.color=$BG0
   background.corner_radius=5
 )
 sketchybar --default "${default[@]}"
